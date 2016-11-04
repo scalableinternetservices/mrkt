@@ -1,3 +1,104 @@
 // Place all the styles related to the StaticPages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800');
+
+.debug_dump{
+  display: none !important;
+}
+
+body{
+  background-color: #34495e;
+}
+
+h1{
+  padding-top: 80px;
+  font-family:"Lato",Helvetica,Arial,sans-serif !important;
+  letter-spacing: 6px;
+  font-size: 60px !important;
+  font-weight: 300;
+  color: #ecf0f1 !important;
+  padding-bottom: 10px;
+
+}
+
+.home{
+  padding-top: 80px;
+  letter-spacing: 15px;
+  font-size: 150px !important;
+}
+
+h2{
+  font-family:"Lato",Helvetica,Arial,sans-serif !important;
+  letter-spacing: 2px;
+  font-size: 32px !important;
+  font-weight: 400;
+  color: #ecf0f1 !important;
+  padding-bottom: 60px;
+}
+
+.btn-primary{
+  background-color: #27ae60;
+  border-color: #27ae60;
+  border-radius: 40px;
+  width: 200px;
+  font-family:"Lato",Helvetica,Arial,sans-serif !important;
+  letter-spacing: 2px;
+  font-size: 20px !important;
+  font-weight: 300;
+
+}
+
+.btn-primary:hover{
+  background-color: white;
+  border-color: white;
+  -webkit-transition: .25s ease 0s;
+  transition: .25s ease 0s;
+  color:#27ae60;
+}
+
+label{
+  font-family:"Lato",Helvetica,Arial,sans-serif !important;
+  letter-spacing: 2px;
+  font-size: 20px !important;
+  font-weight: 300;
+  color: white;
+}
+
+.form-control{
+  outline: 0;
+  border-color: white;
+  background: transparent;
+  font-family:"Lato",Helvetica,Arial,sans-serif !important;
+  font-size: 18px;
+  color: white;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+p{
+  font-family:"Lato",Helvetica,Arial,sans-serif !important;
+  font-size: 18px;
+}
+
+a{
+  color:white;
+}
+a:hover{
+  -webkit-transition: .25s ease 0s;
+  transition: .25s ease 0s;
+  color:#27ae60;
+}
+
+.navbar{
+  border-bottom: none;
+}
+
+.navbar-inverse .navbar-nav > li > a{
+  color: white !important;
+  font-family:"Lato",Helvetica,Arial,sans-serif !important;
+  letter-spacing: 2px;
+  font-size: 20px !important;
+  font-weight: 300;
+}
+
