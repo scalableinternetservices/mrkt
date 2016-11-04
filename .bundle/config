@@ -1,2 +1,6 @@
 ---
+<<<<<<< HEAD
 BUNDLE_WITHOUT: production
+=======
+BUNDLE_WITHOUT: "production"
+>>>>>>> 096e23a0e2a9c784129de2d83e501ad5d7be9edd
