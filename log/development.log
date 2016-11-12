@@ -3721,3 +3721,137 @@ Processing by StaticPagesController#home as HTML
 Completed 200 OK in 78ms (Views: 72.1ms | ActiveRecord: 0.7ms)
 
 
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddPictureToMicroposts (20161112202527)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "microposts" ADD "picture" varchar[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161112202527"]]
+  [1m[35m (302.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_microposts_on_user_id_and_created_at' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_microposts_on_user_id_and_created_at' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_microposts_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_microposts_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+Started GET "/" for ::1 at 2016-11-12 12:31:39 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 101], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "microposts" WHERE "microposts"."user_id" = ?[0m  [["user_id", 101]]
+  Rendered shared/_user_info.html.erb (8.1ms)
+  Rendered shared/_error_messages.html.erb (0.5ms)
+  Rendered shared/_micropost_form.html.erb (17.4ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "microposts" WHERE (user_id = 101)[0m
+  Rendered shared/_feed.html.erb (1.6ms)
+  Rendered static_pages/home.html.erb within layouts/application (34.0ms)
+  Rendered layouts/_shim.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (1.9ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 606ms (Views: 521.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for ::1 at 2016-11-12 12:31:49 -0800
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 101], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "microposts" WHERE "microposts"."user_id" = ?[0m  [["user_id", 101]]
+  Rendered shared/_user_info.html.erb (2.5ms)
+  Rendered shared/_error_messages.html.erb (1.0ms)
+  Rendered shared/_micropost_form.html.erb (3.9ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "microposts" WHERE (user_id = 101)[0m
+  Rendered shared/_feed.html.erb (1.2ms)
+  Rendered static_pages/home.html.erb within layouts/application (11.9ms)
+  Rendered layouts/_shim.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 72ms (Views: 65.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2016-11-12 12:31:50 -0800
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 101], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "microposts" WHERE "microposts"."user_id" = ?[0m  [["user_id", 101]]
+  Rendered shared/_user_info.html.erb (2.3ms)
+  Rendered shared/_error_messages.html.erb (0.4ms)
+  Rendered shared/_micropost_form.html.erb (2.7ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "microposts" WHERE (user_id = 101)[0m
+  Rendered shared/_feed.html.erb (1.2ms)
+  Rendered static_pages/home.html.erb within layouts/application (10.4ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (2.3ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 115ms (Views: 110.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for ::1 at 2016-11-12 12:31:54 -0800
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 101], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of users/_user.html.erb [30 times] (5.6ms)
+  Rendered users/index.html.erb within layouts/application (484.9ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 552ms (Views: 540.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2016-11-12 12:32:05 -0800
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 101], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "microposts" WHERE "microposts"."user_id" = ?[0m  [["user_id", 101]]
+  Rendered shared/_user_info.html.erb (2.4ms)
+  Rendered shared/_error_messages.html.erb (0.4ms)
+  Rendered shared/_micropost_form.html.erb (3.3ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "microposts" WHERE (user_id = 101)[0m
+  Rendered shared/_feed.html.erb (1.1ms)
+  Rendered static_pages/home.html.erb within layouts/application (11.0ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (1.6ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 59ms (Views: 53.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2016-11-12 12:32:54 -0800
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 101], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "microposts" WHERE "microposts"."user_id" = ?[0m  [["user_id", 101]]
+  Rendered shared/_user_info.html.erb (2.5ms)
+  Rendered shared/_error_messages.html.erb (0.4ms)
+  Rendered shared/_micropost_form.html.erb (2.9ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "microposts" WHERE (user_id = 101)[0m
+  Rendered shared/_feed.html.erb (1.3ms)
+  Rendered static_pages/home.html.erb within layouts/application (11.4ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (1.6ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 63ms (Views: 58.0ms | ActiveRecord: 0.6ms)
+
+
