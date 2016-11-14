@@ -139,15 +139,12 @@ p {
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
-  color: white;
+  color: #484848;
   text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 9px;
   font-weight: bold;
-  &:hover {
-    color: white;
-    text-decoration: none;
-  }
+  font-family:"Gotham-Bold",Helvetica,Arial,sans-serif;
 }
 
 /* footer */

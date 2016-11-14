@@ -15,17 +15,63 @@
   </div>
 <% else %>
 
+<div class="center intro">
+  <div style="height: 120px;"></div>
+  <h1 class="home">One man's trash is another man's treasure</h1>
+
+  <%= link_to "Register", signup_path, class: "btn btn-lg btn-primary" %>
+  <div style="height: 120px;"></div>
+
+</div>
+
 <div class="center">
-  <div style="height: 30px;"></div>
-  <img src="https://secure.jhu.edu/sites/all/themes/water_institute/images/gift-box.png" style="padding-top: 20px; padding-bottom: 0px; height:100px;"><br>
-  <h1 class="home">MRKT</h1>
+  <h1 class="section">Claim items in your neighborhood for <span style="color:#00C9FF">free</span></h1>
+  <p>Whether you're replacing a broken home appliance or finding your next gift, MRKT has proven to be the
+  fastest and simplest way to find items for free. Simply sign up or login to view items in your
+  neighborhood.</p>
+  <div style="height: 100px;"></div>
+  <div style="padding-left: 5%; padding-right: 5%;">
+    <div class="grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": ".grid-sizer", "percentPosition": "true" }'>
+      <div class="grid-sizer"></div>
+      <div class="grid-item">
+        <img src="images/basket.jpg" />
+        <h1 class="small-section"><span style="font-size:12px;">New York City, NY</span><br>Kitchen Basket</h1>
+      </div>
+      <div class="grid-item">
+        <img src="images/bike.jpg" />
+        <h1 class="small-section"><span style="font-size:12px;">Portland, OR</span><br>Fixie Bike</h1>
+      </div>
+      <div class="grid-item">
+        <img src="images/chair.jpg" />
+        <h1 class="small-section"><span style="font-size:12px;">Los Angeles, CA</span><br>Leather Chair</h1>
+      </div>
+      <div class="grid-item">
+        <img src="images/bulb.jpg" />
+        <h1 class="small-section"><span style="font-size:12px;">Chicago, IL</span><br>Light Fixture</h1>
+      </div>
+      <div class="grid-item">
+        <img src="images/skirt.jpg" />
+        <h1 class="small-section"><span style="font-size:12px;">Phoenix, AZ</span><br>Women's Skirt</h1>
+      </div>
+      <div class="grid-item">
+        <img src="images/boots.jpg" />
+        <h1 class="small-section"><span style="font-size:12px;">Miami, FL</span><br>Men's Boots</h1>
+      </div>
+      <div class="grid-item">
+              <img src="images/pillow.jpg" />
+              <h1 class="small-section"><span style="font-size:12px;">San Francisco, CA</span><br>Pillow Cases</h1>
+      </div>
+      <div class="grid-item">
+                    <img src="images/picture.jpg" />
+                    <h1 class="small-section"><span style="font-size:12px;">Seattle, WA</span><br>Picture Frames</h1>
+      </div>
+      <div class="grid-item">
+                          <img src="images/plates.jpg" />
+                          <h1 class="small-section"><span style="font-size:12px;">Atlanta, GA</span><br>Plates</h1>
+            </div>
+    </div>
+  </div>
 
-  <h2>
-    One man's trash is another man's <span style="color:#27ae60;">treasure</span>
-  </h2>
-
-
-  <%= link_to "REGISTER", signup_path, class: "btn btn-lg btn-primary" %>
 </div>
 
 <% end %>
