@@ -6,6 +6,22 @@
 .debug_dump{
   display: none !important;
 }
+.link{
+  font-family:"Gotham-Medium",Helvetica,Arial,sans-serif;
+  font-size: 20px !important;
+  letter-spacing: 1px !important;
+}
+
+a{
+  color: #FFB300;
+}
+
+a:hover{
+  text-decoration: none;
+  color:#cc8f00;
+  -webkit-transition: .2s ease 0s;
+  transition: .2s ease 0s;
+}
 
 body{
   padding-top: 50px !important;
@@ -50,9 +66,10 @@ h1{
   left: 0;
   width: 100%;
   padding-bottom: 2% !important;
-  padding-left: 10% !important;
+  padding-left: 7% !important;
   padding-right: 0 !important;
   text-align: left !important;
+
 }
 
 .home{
@@ -76,11 +93,50 @@ h2{
   background-color: transparent;
   border-color: white;
   border-width: 2px;
-  border-radius: 40px;
+  border-radius: 3px;
   width: 200px;
   font-family:"Gotham-Light",Helvetica,Arial,sans-serif !important;
-  font-size: 20px !important;
+  font-size: 20px;
 
+}
+
+
+
+.small{
+  border-color: #FFB300 !important;
+  color: white !important;
+  font-size: 16px !important;
+  width: 150px !important;
+  background-color: #FFB300 !important;
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
+}
+.big{
+  border-color: #FFB300 !important;
+  color: white !important;
+  width: 100% !important;
+  background-color: #FFB300 !important;
+}
+
+.small:hover, .big:hover{
+  background-color: white !important;
+  color: #FFB300 !important;
+  -webkit-transition: .2s ease 0s;
+  transition: .2s ease 0s;
+}
+
+.small:active, .big:active{
+  background-color: white !important;
+  color: #FFB300 !important;
+  -webkit-transition: .2s ease 0s;
+  transition: .2s ease 0s;
+}
+
+.small:focus, .big:focus{
+  background-color: white !important;
+  color: #FFB300 !important;
+  -webkit-transition: .2s ease 0s;
+  transition: .2s ease 0s;
 }
 
 .btn-primary:hover{
@@ -108,22 +164,28 @@ h2{
 
 
 }
+form{
+  padding-left: 20%;
+  padding-right: 20%;
+}
 
 label{
-  font-family:"Gotham-Light",Helvetica,Arial,sans-serif !important;
-  font-size: 20px !important;
-  font-weight: 300;
-  color: #484848;
+  font-family:"Gotham-Book",Helvetica,Arial,sans-serif !important;
+  font-size: 16px !important;
+  color: #999;
+  font-weight: normal;
 }
 
 .form-control{
-  outline: 0;
-  border-color: white;
-  background: transparent;
-  font-family:"Gotham-Light",Helvetica,Arial,sans-serif !important;
-  font-size: 20px !important;
+  font-family:"Gotham-Book",Helvetica,Arial,sans-serif !important;
+  font-size: 16px !important;
   color: #484848;
-  font-weight: 400;
+  font-weight: normal;
+  border-color: #999;
+  border-radius: 3px;
+  background: transparent;
+  padding-top: 14px;
+  padding-bottom: 14px;
 }
 
 p{
@@ -132,19 +194,34 @@ p{
   padding-left: 20%;
   padding-right: 20%;
   color: #999;
+  padding-bottom: 30px;
 }
 
 
 
-.navbar{
-  border-bottom: none;
+.navbar-inverse{
+  box-shadow: 2px 2px 1px #e5e5e5;
+  border: none !important;
+  background-color: white;
 }
 
 .navbar-inverse .navbar-nav > li > a{
   color: #484848 !important;
-  font-family:"Gotham-Light",Helvetica,Arial,sans-serif !important;
-  font-size: 20px !important;
+  font-family:"Gotham-Book",Helvetica,Arial,sans-serif !important;
+  font-size: 16px !important;
   font-weight: 300;
+  transition: top ease 0.5s;
+  position: relative !important;
+  border-top: 4px solid white;
+  border-bottom: 4px solid white;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover{
+  border-top: 4px solid #00C9FF;
+  position: relative !important;
+  -webkit-transition: .1s ease 0s;
+  transition: .1s ease 0s;
+
 }
 
 .grid {
@@ -173,5 +250,6 @@ p{
   display: block;
   max-width: 100%;
   border: 5px solid white;
+  background: rgba(0, 0, 0, .6);
 }
 

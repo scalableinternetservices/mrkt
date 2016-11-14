@@ -25,11 +25,12 @@
 </div>
 
 <div class="center">
-  <h1 class="section">Claim items in your neighborhood for <span style="color:#00C9FF">free</span></h1>
+  <h1 class="section">Claim items in your neighborhood for <span style="color:#FFB300">free</span></h1>
   <p>Whether you're replacing a broken home appliance or finding your next gift, MRKT has proven to be the
   fastest and simplest way to find items for free. Simply sign up or login to view items in your
   neighborhood.</p>
-  <div style="height: 100px;"></div>
+  <%= link_to "Sign up", signup_path, class: "btn btn-lg btn-primary small" %>
+  <div style="height: 60px;"></div>
   <div style="padding-left: 5%; padding-right: 5%;">
     <div class="grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": ".grid-sizer", "percentPosition": "true" }'>
       <div class="grid-sizer"></div>
@@ -69,6 +70,10 @@
                           <img src="images/plates.jpg" />
                           <h1 class="small-section"><span style="font-size:12px;">Atlanta, GA</span><br>Plates</h1>
             </div>
+      <div class="grid-item">
+                                <img src="images/wallet.jpg" />
+                                <h1 class="small-section"><span style="font-size:12px;">Houston, TX</span><br>Wallet</h1>
+                  </div>
     </div>
   </div>
 
