@@ -35,46 +35,67 @@
     <div class="grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": ".grid-sizer", "percentPosition": "true" }'>
       <div class="grid-sizer"></div>
       <div class="grid-item">
+
         <img src="images/basket.jpg" />
-        <h1 class="small-section"><span style="font-size:12px;">New York City, NY</span><br>Kitchen Basket</h1>
+        <h1 class="small-section grid-half"><span style="font-size:12px;">New York City, NY</span><br>Kitchen Basket</h1>
+
       </div>
       <div class="grid-item">
         <img src="images/bike.jpg" />
-        <h1 class="small-section"><span style="font-size:12px;">Portland, OR</span><br>Fixie Bike</h1>
+        <h1 class="small-section grid-half"><span style="font-size:12px;">Portland, OR</span><br>Fixie Bike</h1>
       </div>
       <div class="grid-item">
         <img src="images/chair.jpg" />
-        <h1 class="small-section"><span style="font-size:12px;">Los Angeles, CA</span><br>Leather Chair</h1>
+        <h1 class="small-section grid-half"><span style="font-size:12px;">Los Angeles, CA</span><br>Leather Chair</h1>
       </div>
       <div class="grid-item">
         <img src="images/bulb.jpg" />
-        <h1 class="small-section"><span style="font-size:12px;">Chicago, IL</span><br>Light Fixture</h1>
+        <h1 class="small-section grid-half"><span style="font-size:12px;">Chicago, IL</span><br>Light Fixture</h1>
       </div>
       <div class="grid-item">
         <img src="images/skirt.jpg" />
-        <h1 class="small-section"><span style="font-size:12px;">Phoenix, AZ</span><br>Women's Skirt</h1>
+        <h1 class="small-section grid-half"><span style="font-size:12px;">Phoenix, AZ</span><br>Women's Skirt</h1>
       </div>
       <div class="grid-item">
         <img src="images/boots.jpg" />
-        <h1 class="small-section"><span style="font-size:12px;">Miami, FL</span><br>Men's Boots</h1>
+        <h1 class="small-section grid-half"><span style="font-size:12px;">Miami, FL</span><br>Men's Boots</h1>
       </div>
       <div class="grid-item">
-              <img src="images/pillow.jpg" />
-              <h1 class="small-section"><span style="font-size:12px;">San Francisco, CA</span><br>Pillow Cases</h1>
+        <img src="images/pillow.jpg" />
+        <h1 class="small-section grid-half"><span style="font-size:12px;">San Francisco, CA</span><br>Pillow Cases</h1>
       </div>
       <div class="grid-item">
-                    <img src="images/picture.jpg" />
-                    <h1 class="small-section"><span style="font-size:12px;">Seattle, WA</span><br>Picture Frames</h1>
+        <img src="images/picture.jpg" />
+        <h1 class="small-section grid-half"><span style="font-size:12px;">Seattle, WA</span><br>Picture Frames</h1>
       </div>
       <div class="grid-item">
-                          <img src="images/plates.jpg" />
-                          <h1 class="small-section"><span style="font-size:12px;">Atlanta, GA</span><br>Plates</h1>
-            </div>
+        <img src="images/plates.jpg" />
+        <h1 class="small-section grid-half"><span style="font-size:12px;">Atlanta, GA</span><br>Plates</h1>
+      </div>
       <div class="grid-item">
-                                <img src="images/wallet.jpg" />
-                                <h1 class="small-section"><span style="font-size:12px;">Houston, TX</span><br>Wallet</h1>
-                  </div>
+        <img src="images/wallet.jpg" />
+        <h1 class="small-section grid-half"><span style="font-size:12px;">Houston, TX</span><br>Wallet</h1>
+      </div>
     </div>
+  </div>
+  <div style="height: 120px;"></div>
+  <div class="row" >
+
+    <div class="col-md-5" style="text-align: left !important;">
+       <h1 class="section" style="text-align: left !important;">Find items near you</h1>
+        <p style="padding-left: 10% !important; padding-right: 10% !important;">Our goal at Mrkt
+        is to provide a platform for all people to find and donate their belongings. With users
+        all over America, the number of items for grab is staggering.
+        See below to find out if Mrkt is offered in a city near you.
+        </p>
+        <div style="padding-left: 10%;"><%= link_to "Search cities", signup_path, class: "btn btn-lg btn-primary small" %></div>
+        <div style="height: 100px;"></div>
+    </div>
+
+    <div class="col-md-7">
+      <img style="width: 100%" src="images/girl-bike.jpg">
+    </div>
+
   </div>
 
 </div>

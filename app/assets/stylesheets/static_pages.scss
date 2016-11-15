@@ -244,12 +244,31 @@ p{
 
 .grid-item {
   float: left;
+  border: 5px solid white;
+}
+
+.grid-item:hover {
+  float: left;
+  border: 1px solid white;
+  -webkit-transition: .5s ease 0s;
+  transition: .3s ease 0s;
+  border-radius: 5px;
+}
+
+.grid-half{
+  background: -webkit-linear-gradient(to top, rgba(0,0,0,0.4), transparent 70px, transparent) !important; /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, rgba(0,0,0,0.4), transparent 70px, transparent) !important;
+  margin-bottom: 0 !important;
 }
 
 .grid-item img {
   display: block;
   max-width: 100%;
-  border: 5px solid white;
-  background: rgba(0, 0, 0, .6);
+  cursor: pointer;
+
+
 }
+
+
+
 
