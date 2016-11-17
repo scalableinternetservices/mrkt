@@ -4,9 +4,6 @@
       <section class="user_info">
         <%= render 'shared/user_info' %>
       </section>
-      <section class="stats">
-        <%= render 'shared/stats' %>
-      </section>
       <section class="micropost_form">
         <%= render 'shared/micropost_form' %>
       </section>
@@ -22,7 +19,7 @@
   <div style="height: 120px;"></div>
   <h1 class="home">One man's trash is another man's treasure</h1>
 
-  <%= link_to "Register", signup_path, class: "btn btn-lg btn-primary" %>
+  <%= link_to "Register", signup_path, class: "btn btn-lg btn-primary btn-title" %>
   <div style="height: 120px;"></div>
 
 </div>
@@ -32,7 +29,7 @@
   <p>Whether you're replacing a broken home appliance or finding your next gift, MRKT has proven to be the
   fastest and simplest way to find items for free. Simply sign up or login to view items in your
   neighborhood.</p>
-  <%= link_to "Sign up", signup_path, class: "btn btn-lg btn-primary small" %>
+  <%= link_to "Sign up", signup_path, class: "btn btn-lg btn-primary" %>
   <div style="height: 60px;"></div>
   <div style="padding-left: 5%; padding-right: 5%;">
     <div class="grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": ".grid-sizer", "percentPosition": "true" }'>
@@ -91,7 +88,7 @@
         all over America, the number of items for grab is staggering.
         See below to find out if Mrkt is offered in a city near you.
         </p>
-        <div style="padding-left: 10%;"><%= link_to "Search cities", signup_path, class: "btn btn-lg btn-primary small" %></div>
+        <div style="padding-left: 10%;"><%= link_to "Search cities", signup_path, class: "btn btn-lg btn-primary" %></div>
         <div style="height: 100px;"></div>
     </div>
 

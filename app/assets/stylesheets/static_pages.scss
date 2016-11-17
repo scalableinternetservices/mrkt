@@ -89,78 +89,90 @@ h2{
   padding-bottom: 60px;
 }
 
-.btn-primary{
-  background-color: transparent;
-  border-color: white;
+.btn-title{
+  background-color: transparent !important;
+  border-color: white !important;
   border-width: 2px;
   border-radius: 3px;
-  width: 200px;
-  font-family:"Gotham-Light",Helvetica,Arial,sans-serif !important;
-  font-size: 20px;
+  width: 200px !important;
+  font-size: 20px !important;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
 
 }
 
 
 
-.small{
-  border-color: #FFB300 !important;
-  color: white !important;
-  font-size: 16px !important;
-  width: 150px !important;
-  background-color: #FFB300 !important;
-  padding-top: 5px !important;
-  padding-bottom: 5px !important;
+.btn-primary{
+  font-family:"Gotham-Light",Helvetica,Arial,sans-serif;
+  border-color: #FFB300;
+  color: white;
+  font-size: 16px;
+  width: 150px;
+  background-color: #FFB300;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 3px;
 }
 .big{
-  border-color: #FFB300 !important;
-  color: white !important;
   width: 100% !important;
-  background-color: #FFB300 !important;
+  padding-top: 14.5px !important;
+  padding-bottom: 14.5px !important;
 }
 
-.small:hover, .big:hover{
+.btn-primary:hover, .big:hover{
   background-color: white !important;
   color: #FFB300 !important;
   -webkit-transition: .2s ease 0s;
   transition: .2s ease 0s;
+  border-color: #FFB300 !important;
 }
 
-.small:active, .big:active{
+.btn-primary:active, .big:active{
   background-color: white !important;
   color: #FFB300 !important;
   -webkit-transition: .2s ease 0s;
   transition: .2s ease 0s;
+  border-color: #FFB300 !important;
+  box-shadow: none !important;
+  outline: none !important;
 }
 
-.small:focus, .big:focus{
+.btn-primary:focus, .big:focus{
   background-color: white !important;
   color: #FFB300 !important;
   -webkit-transition: .2s ease 0s;
   transition: .2s ease 0s;
+  border-color: #FFB300 !important;
+  box-shadow: none !important;
+  outline: none !important;
 }
 
-.btn-primary:hover{
-  box-shadow: 0px 0px 0px 4px white;
-  -webkit-transition: .2s ease 0s;
-  transition: .2s ease 0s;
-  background-color: transparent;
-  border-color: white;
-}
-
-.btn-primary:active{
+.btn-title:hover{
   box-shadow: 0px 0px 0px 4px white !important;
   -webkit-transition: .2s ease 0s !important;
   transition: .2s ease 0s !important;
   background-color: transparent !important;
   border-color: white !important;
+  color: white !important;
 }
 
-.btn-primary:focus{
+.btn-title:active{
   box-shadow: 0px 0px 0px 4px white !important;
   -webkit-transition: .2s ease 0s !important;
   transition: .2s ease 0s !important;
   background-color: transparent !important;
   border-color: white !important;
+  color: white !important;
+}
+
+.btn-title:focus{
+  box-shadow: 0px 0px 0px 4px white !important;
+  -webkit-transition: .2s ease 0s !important;
+  transition: .2s ease 0s !important;
+  background-color: transparent !important;
+  border-color: white !important;
+  color: white !important;
 
 
 }
