@@ -1,9 +1,8 @@
 class Micropost < ApplicationRecord
   belongs_to :user
-  belongs_to :claimer, class_name: "User", foreign_key: :claimed
+  belongs_to :claimer, optional: true, class_name: "User", foreign_key: :claimed
   default_scope -> { order(created_at: :desc) }
   mount_uploader :picture, PictureUploader
-  # validates
   validates :user_id, presence: true
   validates :content, presence: true, length: { maximum: 140 }
   validate  :picture_size

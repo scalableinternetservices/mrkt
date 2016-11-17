@@ -19,6 +19,24 @@ class MicropostsController < ApplicationController
     redirect_to request.referrer || root_url
   end
 
+  def claim
+    @micropost = Micropost.find_by(id: params[:id])
+    if @micropost.claimed?
+      # unclaim
+      if current_user?(@micropost.claimer)
+        @micropost.claimer = nil
+        flash[:notice] = "Unclaimed #{@micropost.content}"
+      else
+        return
+      end
+    else
+      @micropost.claimer = current_user
+      flash[:notice] = "Claimed #{@micropost.content}"
+    end
+    @micropost.save
+    redirect_to root_url
+  end
+
   private
 
  def micropost_params

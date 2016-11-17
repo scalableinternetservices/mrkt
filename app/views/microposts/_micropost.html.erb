@@ -15,4 +15,16 @@
   <span class="location">
     Location: <%= micropost.location %>
   </span>
+  <br />
+  <span class="claimed">
+    Status:
+    <% if micropost.claimed? %>
+      Claimed
+      <% if current_user?(micropost.claimer) %>
+      | <a href="<%= claim_micropost_path(micropost) %>">Unclaim</a>
+      <% end %>
+    <% else %>
+      Unclaimed | <a href="<%= claim_micropost_path(micropost) %>">Claim</a>
+    <% end %>
+  </span>
 </li>
