@@ -9,6 +9,7 @@ class StaticPagesController < ApplicationController
 
   def claims
     if logged_in?
+      @cart_view = true
       @micropost  = current_user.claims.build
       @feed_items = current_user.claims.paginate(page: params[:page])
       render "home"

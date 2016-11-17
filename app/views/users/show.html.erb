@@ -6,6 +6,7 @@
         <%= gravatar_for @user %>
         <%= @user.name %>
       </h1>
+      <p>Contact: <%= if @user.email?; @user.email; end %></p>
     </section>
     <section class="stats">
       <%= render 'shared/stats' %>

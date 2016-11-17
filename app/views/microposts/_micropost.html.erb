@@ -12,6 +12,9 @@
                                        data: { confirm: "You sure?" } %>
     <% end %>
   </span>
+  <% if @cart_view %>
+    <span class="contact">Contact: <%= micropost.user.email %></span>
+  <% end %>
   <span class="location">
     Location: <%= micropost.location %>
   </span>
