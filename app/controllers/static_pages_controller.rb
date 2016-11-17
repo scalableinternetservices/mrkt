@@ -7,6 +7,16 @@ class StaticPagesController < ApplicationController
     end
   end
 
+  def claims
+    if logged_in?
+      @micropost  = current_user.claims.build
+      @feed_items = current_user.claims.paginate(page: params[:page])
+      render "home"
+    else
+      redirect_to root_path
+    end
+  end
+
   def feed
     if logged_in?
       @micropost  = current_user.microposts.build
