@@ -64,7 +64,7 @@ class User < ApplicationRecord
                      WHERE  follower_id = :user_id"
     Micropost.where("user_id IN (#{following_ids})
                      OR user_id = :user_id", user_id: id)
-             .where('Location LIKE ? OR Content Like ?', term, term)
+              .where('Location LIKE ? OR Content Like ?', "%" + term + "%", "%" + term + "%")
   end
 
    # Follows a user.
