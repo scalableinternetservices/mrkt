@@ -1,15 +1,15 @@
 <%= form_for(@micropost, html: { multipart: true }) do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
   <div class="field">
-    <%= f.text_area :content, placeholder: "Compose new micropost..." %>
+    <%= f.text_area :content, placeholder: "New post", class: "form-control" %>
     <%= f.select(:location, options_for_select([['Chicago, IL', 'Chicago, IL'], ['Dallas, TX', 'Dallas, TX'], ['Los Angeles, CA', 'Los Angeles, CA'], ['New York City, NY', 'New York City, NY'], ['Philadelphia, PA', 'Philadelphia, PA'], ['Phoenix, AZ', 'Phoenix, AZ'], ['San Diego, CA', 'San Diego, CA'], ['San Francisco, CA', 'San Francisco, CA']], selected: :location)) %>
 
 
   </div>
-  <%= f.submit "Post", class: "btn btn-primary" %>
   <span class="picture">
     <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png' %>
   </span>
+  <%= f.submit "Post", class: "btn btn-primary big" %>
 <% end %>
 
 <script type="text/javascript">

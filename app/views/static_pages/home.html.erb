@@ -1,21 +1,13 @@
 <% if logged_in? %>
 
     <aside>
-      <section class="user_info">
-        <%= render 'shared/user_info' %>
-      </section>
-      <section class="micropost_form">
+      <h1>Your Feed</h1>
+      <section class="micropost_form" style="padding-left: 25%; padding-right:25%;">
         <%= render 'shared/micropost_form' %>
       </section>
     </aside>
     <div>
-      <h3>Micropost Feed</h3>
-      <p>
-        <%= form_tag '/feed', method: :post do %>
-          <%= text_field_tag :term, '' %>
-          <%= submit_tag "Search", :name => nil %>
-        <% end %>
-      </p>
+
       <div class="grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": ".grid-sizer", "percentPosition": "true" }'>
             <div class="grid-sizer"></div>
             <%= render 'shared/feed' %>

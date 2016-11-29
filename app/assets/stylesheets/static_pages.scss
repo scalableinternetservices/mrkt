@@ -313,6 +313,24 @@ p{
 
 }
 
+.fa-heart{}
+
+.fa-heart:hover{
+  color: #cc8f00;
+  -webkit-transition: .2s ease 0s;
+  transition: .2s ease 0s;
+}
+
+.alert-success{
+  background-color: white;
+  border-color: white;
+}
+
+.alert-danger{
+  background-color: white;
+  border-color: white;
+}
+
 
 
 

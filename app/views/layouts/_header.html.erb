@@ -2,6 +2,21 @@
   <div class="container">
     <%= link_to "MRKT", root_path, id: "logo" %>
     <nav>
+    <% if logged_in? %>
+      <ul class="nav navbar-nav navbar-center">
+        <li style="width: 675px;">
+
+                <%= form_tag '/feed', method: :post do %>
+                    <div class="row" style="margin-top: 5px;">
+                        <%= text_field_tag :term, '',class: 'form-control col-xs-10', placeholder: "Search your feed",style:"width:70% !important; margin-bottom: 5px;"%>
+                        <%= submit_tag "Go", :name => nil, class: "btn btn-lg btn-primary big col-xs-1", style:"width:28% !important; float:right;" %>
+                    </div>
+                <% end %>
+
+        </li>
+
+      </ul>
+      <% end %>
       <ul class="nav navbar-nav navbar-right">
        <% if logged_in? %>
           <li><%= link_to "Feed", root_path %></li>
