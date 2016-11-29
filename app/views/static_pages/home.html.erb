@@ -1,6 +1,6 @@
 <% if logged_in? %>
   <div class="row">
-    <aside class="col-md-4">
+    <aside class="col-md-12">
       <section class="user_info">
         <%= render 'shared/user_info' %>
       </section>
@@ -8,7 +8,7 @@
         <%= render 'shared/micropost_form' %>
       </section>
     </aside>
-    <div class="col-md-8">
+    <div class="col-md-12">
       <h3>Micropost Feed</h3>
       <p>
         <%= form_tag '/feed', method: :post do %>
@@ -16,7 +16,10 @@
           <%= submit_tag "Search", :name => nil %>
         <% end %>
       </p>
-      <%= render 'shared/feed' %>
+      <div class="grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": ".grid-sizer", "percentPosition": "true" }'>
+            <div class="grid-sizer"></div>
+            <%= render 'shared/feed' %>
+      </div>
     </div>
   </div>
 <% else %>

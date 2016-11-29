@@ -1,33 +1,44 @@
-<li id="micropost-<%= micropost.id %>">
-  <%= link_to gravatar_for(micropost.user, size: 50), micropost.user %>
-  <span class="user"><%= link_to micropost.user.name, micropost.user %></span>
-  <span class="content">
-    <%= micropost.content %>
-    <%= image_tag micropost.picture.url if micropost.picture? %>
-  </span>
-  <span class="timestamp">
-    Posted <%= time_ago_in_words(micropost.created_at) %> ago.
-    <% if current_user?(micropost.user) %>
-      <%= link_to "delete", micropost, method: :delete,
-                                       data: { confirm: "You sure?" } %>
-    <% end %>
+
+<div class="grid-item">
+<li id="micropost-<%= micropost.id %>" style="padding-bottom: 0 !important; padding-top: 0 !important;">
+  <!--<span class="user"><%= link_to micropost.user.name, micropost.user %></span><br>
+  <span class="timestamp" style="margin-left: 0 !important;">
+      Posted <%= time_ago_in_words(micropost.created_at) %> ago.
+      <% if current_user?(micropost.user) %>
+        <%= link_to "delete", micropost, method: :delete,
+                                         data: { confirm: "You sure?" } %>
+      <% end %>
   </span>
   <% if @cart_view %>
-    <span class="contact">Contact: <%= micropost.user.email %></span>
-  <% end %>
-  <span class="location">
-    Location: <%= micropost.location %>
-  </span>
-  <br />
-  <span class="claimed">
-    Status:
-    <% if micropost.claimed? %>
-      Claimed
-      <% if current_user?(micropost.claimer) %>
-      | <a href="<%= claim_micropost_path(micropost) %>">Unclaim</a>
-      <% end %>
-    <% else %>
-      Unclaimed | <a href="<%= claim_micropost_path(micropost) %>">Claim</a>
+      <span class="contact">Contact: <%= micropost.user.email %></span>
     <% end %>
-  </span>
+    <br />
+    <span class="claimed">
+      Status:
+      <% if micropost.claimed? %>
+        Claimed
+        <% if current_user?(micropost.claimer) %>
+        | <a href="<%= claim_micropost_path(micropost) %>">Unclaim</a>
+        <% end %>
+      <% else %>
+        Unclaimed | <a href="<%= claim_micropost_path(micropost) %>">Claim</a>
+      <% end %>
+    </span>-->
+
+
+    <%= image_tag micropost.picture.url if micropost.picture? %>
+    <h1 class="smaller-section grid-upper-half" style="margin-top: 0 !important; padding-top: 10px !important;">
+      <%= link_to micropost.user.name, micropost.user, {:style=>'color:#FFFFFF; text-decoration:underline'} %>
+    </h1>
+    <h1 class="small-section grid-half">
+      <span style="font-size:12px;"><%= micropost.location %></span>
+      <br>
+      <%= micropost.content %>
+    </h1>
+
+
+
+
 </li>
+</div>
+

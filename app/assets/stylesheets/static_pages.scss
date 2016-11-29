@@ -71,6 +71,20 @@ h1{
   text-align: left !important;
 
 }
+.smaller-section{
+  font-family:"Gotham-Medium",Helvetica,Arial,sans-serif;
+  font-size: 12px !important;
+  color: white !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-left: 7% !important;
+  padding-right: 0 !important;
+  text-align: left !important;
+  letter-spacing: 1px !important;
+  padding-bottom: 30%;
+}
 
 .home{
   line-height: 80px;
@@ -259,17 +273,22 @@ p{
   border: 5px solid white;
 }
 
-.grid-item:hover {
+/*.grid-item:hover {
   float: left;
   border: 1px solid white;
   -webkit-transition: .5s ease 0s;
   transition: .3s ease 0s;
   border-radius: 5px;
-}
+}*/
 
 .grid-half{
   background: -webkit-linear-gradient(to top, rgba(0,0,0,0.4), transparent 70px, transparent) !important; /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to top, rgba(0,0,0,0.4), transparent 70px, transparent) !important;
+  margin-bottom: 0 !important;
+}
+.grid-upper-half{
+  background: -webkit-linear-gradient(to bottom, rgba(0,0,0,0.4), transparent 70px, transparent) !important; /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, rgba(0,0,0,0.4), transparent 70px, transparent) !important;
   margin-bottom: 0 !important;
 }
 
