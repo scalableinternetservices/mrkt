@@ -1,0 +1,183 @@
+<?xml version="1.0"?>
+<!DOCTYPE tsung SYSTEM "/home/ec2-user/opt/tsung-1.5.0/share/tsung/tsung-1.0.dtd">
+<tsung loglevel="notice" version="1.0">
+
+  <!-- Client side setup -->
+  <clients>
+    <client host="localhost" use_controller_vm="true" maxusers='15000'/>
+  </clients>
+
+  <!-- Server side setup -->
+  <!-- This will change each time we deploy a Tsung instance! -->
+  <servers>
+    <server host="ec2-54-148-61-114.us-west-2.compute.amazonaws.com" port="80" type="tcp"></server>
+  </servers>
+
+
+  <load>
+    <arrivalphase phase="1" duration="30" unit="second">
+      <users arrivalrate="1" unit="second"></users>
+    </arrivalphase>
+    <arrivalphase phase="2" duration="30" unit="second">
+      <users arrivalrate="2" unit="second"></users>
+    </arrivalphase>
+    <arrivalphase phase="3" duration="30" unit="second">
+      <users arrivalrate="4" unit="second"></users>
+    </arrivalphase>
+<!--
+   <arrivalphase phase="4" duration="30" unit="second">
+     <users arrivalrate="8" unit="second"></users>
+   </arrivalphase>
+   <arrivalphase phase="5" duration="30" unit="second">
+     <users arrivalrate="16" unit="second"></users>
+   </arrivalphase>
+   <arrivalphase phase="6" duration="30" unit="second">
+     <users arrivalrate="32" unit="second"></users>
+   </arrivalphase>
+   <arrivalphase phase="7" duration="30" unit="second">
+     <users arrivalrate="64" unit="second"></users>
+   </arrivalphase>
+   <arrivalphase phase="8" duration="30" unit="second">
+     <users arrivalrate="128" unit="second"></users>
+   </arrivalphase>
+   <arrivalphase phase="9" duration="30" unit="second">
+     <users arrivalrate="256" unit="second"></users>
+   </arrivalphase>
+   <arrivalphase phase="10" duration="30" unit="second">
+     <users arrivalrate="512" unit="second"></users>
+   </arrivalphase>
+-->
+  </load>
+
+  <options>
+    <!-- Set connection timeout to 2 seconds -->
+    <option name="global_ack_timeout" value="2000"></option>
+
+    <option type="ts_http" name="user_agent">
+      <user_agent probability="100">Mozilla/5.0 (Windows; U; Windows NT 5.2; fr-FR; rv:1.7.8) Gecko/20050511 Firefox/1.0.4</user_agent>
+    </option>
+  </options>
+
+  <sessions>
+    <session name="http-example" probability="100" type="ts_http">
+
+      <!-- start out at the dashboard. -->
+      <request>
+        <http url='/' version='1.1' method='GET'></http>
+      </request>
+
+      <!-- wait for up to 4 seconds, user is looking at the landing page -->
+      <thinktime value="4" random="true"></thinktime>
+      
+      <!-- visit the sign up page, as a new user would do.  -->
+      <request>
+          <http url='/signup' version='1.1' method='GET'></http>
+      </request>
+    
+      <!-- wait for up to 2 seconds, user is filling out the signup form -->
+      <thinktime value="2" random="true"></thinktime>
+
+      <!-- create a random name -->
+      <setdynvars sourcetype="random_number" start="1000" end="9999999">
+          <var name="random_name" />
+      </setdynvars>
+
+      <!-- hit the sign up button-->
+      <request subst="true">
+          <http
+              url='/users'
+              version='1.1'
+              method='POST'
+              contents='user%5Bname%5D=user_%%_random_name%%&amp;user%5Bemail%5D=test_%%_random_name%%%40email.com&amp;user%5Bpassword%5D=%%_random_name%%&amp;user%5Bpassword_confirmation%5D=%%_random_name%%&amp;commit=Create+Account'>
+          </http>
+      </request>
+      
+      
+      <!-- visit the all users page  -->
+      <request>
+          <http url='/users' version='1.1' method='GET'></http>
+      </request>
+
+
+      <!-- visit the first user's page  -->
+      <request>
+          <http url='/users/1' version='1.1' method='GET'></http>
+      </request>
+      
+      <!-- wait for up to 1 seconds, user is deciding to follow or not -->
+      <thinktime value="1" random="true"></thinktime>
+
+      <!-- follow the first user's page  -->
+      <request>
+          <http url='/relationships'
+                version='1.1'
+                method='POST'
+                contents='followed_id=1&amp;commit=Follow'></http>
+      </request>
+      
+      
+     
+      <!-- visit the second user's page  -->
+      <request>
+          <http url='/users/2' version='1.1' method='GET'></http>
+      </request>
+     
+     <!-- wait for up to 1 seconds, user is deciding to follow or not -->
+     <thinktime value="1" random="true"></thinktime>
+
+     <!-- follow the second user's page  -->
+      <request>
+          <http url='/relationships'
+              version='1.1'
+              method='POST'
+              contents='followed_id=2&amp;commit=Follow'></http>
+      </request>
+      
+    
+      <!-- visit the third user's page  -->
+      <request>
+          <http url='/users/3' version='1.1' method='GET'></http>
+      </request>
+      
+      <!-- wait for up to 1 seconds, user is deciding to follow or not -->
+      <thinktime value="1" random="true"></thinktime>
+
+      <!-- follow the third user's page  -->
+      <request>
+          <http url='/relationships'
+              version='1.1'
+              method='POST'
+              contents='followed_id=3&amp;commit=Follow'></http>
+      </request>
+      
+      
+      <!-- click the feed button to get to your feed  -->
+      <request>
+          <http url='/' version='1.1' method='GET'></http>
+      </request>
+      
+      
+      
+      <!-- wait for up to 2 seconds, user is deciding what to claim -->
+      <thinktime value="1" random="true"></thinktime>
+
+      
+      <!-- claim an item from the feed -->
+      <request>
+          <http url='/microposts/290/claim' version='1.1' method='GET'></http>
+      </request>
+      <request>
+          <http url='/' version='1.1' method='GET'></http>
+      </request>
+      
+      <!-- view shopping cart -->
+      <request>
+          <http url='/claims' version='1.1' method='GET'></http>
+      </request>
+      
+
+
+
+    </session>
+  </sessions>
+</tsung>
