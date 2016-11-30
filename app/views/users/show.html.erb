@@ -2,23 +2,25 @@
 <div class="row">
   <aside>
     <section>
-      <h1>
-        <%= gravatar_for @user %>
+      <h1 style="padding-bottom: 0; font-size: 36px;">
+        <%= gravatar_for @user , size: 200%>
         <%= @user.name %>
       </h1>
-      <p>Contact: <%= if @user.email?; @user.email; end %></p>
-    </section>
-    <section class="stats">
-      <%= render 'shared/stats' %>
+      <p style="padding-left: 0; padding-right: 0; padding-bottom: 10px;"><%= if @user.email?; @user.email; end %></p>
+      <section class="stats">
+            <%= render 'shared/stats' %>
+      </section>
     </section>
   </aside>
   <div>
     <%= render 'follow_form' if logged_in? %>
     <% if @user.microposts.any? %>
-      <h3>Microposts (<%= @user.microposts.count %>)</h3>
-      <ol class="microposts">
+    <div class="grid">
+      <div class="grid-sizer"></div>
+      <ol>
         <%= render @microposts %>
       </ol>
+    </div>
       <div class="text-center">
       <%= will_paginate @microposts %>
       </div>
