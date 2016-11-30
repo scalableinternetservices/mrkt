@@ -2,6 +2,22 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800');
+@font-face {
+  font-family: 'Gotham-Medium';
+  src: url('/public/fonts/Gotham-Medium.otf');
+}
+@font-face {
+  font-family: 'Gotham-Book';
+  src: url('/public/fonts/Gotham-Book.otf');
+}
+@font-face {
+  font-family: 'Gotham-Bold';
+  src: url('/public/fonts/Gotham-Bold.otf');
+}
+@font-face {
+  font-family: 'Gotham-Light';
+  src: url('/public/fonts/Gotham-Light.otf');
+}
 
 .debug_dump{
   display: none !important;
