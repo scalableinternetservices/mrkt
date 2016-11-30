@@ -329,9 +329,21 @@ p{
 
 }
 
-.fa-heart{}
+.fa-hand-paper-o {
+  font-size: 30px;
+}
 
-.fa-heart:hover{
+.fa-hand-paper-o :hover{
+  color: #cc8f00;
+  -webkit-transition: .2s ease 0s;
+  transition: .2s ease 0s;
+}
+
+.fa-thumbs-o-down{
+  font-size: 30px;
+}
+
+.fa-thumbs-o-down :hover{
   color: #cc8f00;
   -webkit-transition: .2s ease 0s;
   transition: .2s ease 0s;
@@ -345,6 +357,35 @@ p{
 .alert-danger{
   background-color: white;
   border-color: white;
+}
+
+
+.pagination > .active > a{
+  background-color: #FFB300 !important;
+  border-color: #FFB300 !important;
+  font-size: 24px !important;
+}
+.pagination > .active > a:hover{
+  background-color: #FFB300 !important;
+}
+.pagination > li > a{
+  color: #FFB300;
+  border: none !important;
+  font-size: 18px !important;
+  background-color: rgb(248, 248, 248);
+  padding-top: 15px !important;
+  padding-bottom: 15px !important;
+  padding-right: 15px !important;
+  padding-left: 15px !important;
+ }
+
+.pagination > li > a:hover{
+  color: #cc8f00;
+  background-color: rgb(248, 248, 248) !important;
+}
+
+.pagination > .disabled > a{
+  background-color: rgb(248, 248, 248) !important;
 }
 
 

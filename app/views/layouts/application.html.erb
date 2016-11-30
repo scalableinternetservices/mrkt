@@ -3,11 +3,11 @@
   <head>
     <title><%= full_title(yield(:title)) %></title>
     <script src="https://use.fontawesome.com/c5fde45110.js"></script>
-    <script src="https://unpkg.com/masonry-layout@4.1/dist/masonry.pkgd.min.js"></script>
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all',
                                               'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://unpkg.com/masonry-layout@4.1/dist/masonry.pkgd.min.js"></script>
     <%= render 'layouts/shim' %>
 
 

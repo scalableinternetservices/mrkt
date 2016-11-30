@@ -9,10 +9,10 @@
       <span class="claimed" style="float: right;">
             <% if micropost.claimed? %>
               <% if current_user?(micropost.claimer) %>
-              <a href="<%= claim_micropost_path(micropost) %>" style="color: #FFB300;">Unclaim</a>
+              <a href="<%= claim_micropost_path(micropost) %>" style="color: #FFB300;"><i class="fa fa-thumbs-o-down " aria-hidden="true"></i></a>
               <% end %>
             <% else %>
-              <a href="<%= claim_micropost_path(micropost) %>" style="color: #FFB300;"><i class="fa fa-heart" aria-hidden="true"></i></a>
+              <a href="<%= claim_micropost_path(micropost) %>" style="color: #FFB300;"><i class="fa fa-hand-paper-o" aria-hidden="true"></i></a>
             <% end %>
           </span>
     </div>
