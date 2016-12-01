@@ -3,7 +3,7 @@
 //= require bootstrap
 //= require turbolinks
 //= require_tree .
-jQuery(function(){
+$(document).on('turbolinks:load',function(){
     var $grid = $('.grid').masonry({
         itemSelector: '.grid-item',
         percentPosition: true,
@@ -12,5 +12,5 @@ jQuery(function(){
     $grid.imagesLoaded().progress( function() {
         $grid.masonry('layout');
     });
-    msnry.layout()
+    //msnry.layout()
 });
