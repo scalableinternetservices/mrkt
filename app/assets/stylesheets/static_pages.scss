@@ -20,6 +20,7 @@ a{
   text-decoration: underline;
 }
 
+
 a:hover{
   text-decoration: none;
   color:#777777;
@@ -73,7 +74,7 @@ h1{
   left: 0;
   width: 100%;
   padding-bottom: 2% !important;
-  padding-left: 7% !important;
+  padding-left: 4% !important;
   padding-right: 0 !important;
   text-align: left !important;
 
@@ -87,7 +88,7 @@ h1{
   top: 0;
   left: 0;
   width: 100%;
-  padding-left: 7% !important;
+  padding-left: 4% !important;
   padding-right: 0 !important;
   text-align: left !important;
   letter-spacing: 1px !important;
@@ -384,6 +385,15 @@ p{
 .follow-me:hover{
   color: gray !important;
 }
+
+.navbar-inverse .navbar-nav > .open > a{
+  background-color: white !important;
+}
+.nav .open > a, .nav .open > a:hover, .nav .open > a:focus{
+  border: none !important;
+}
+
+
 
 
 

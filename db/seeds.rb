@@ -6,14 +6,17 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+NUM_USERS = 51;
+NUM_USERS_TO_FOLLOW = 1;
 
-User.create!(name:  "Example User",
-             email: "example@railstutorial.org",
-             password:              "foobar",
-             password_confirmation: "foobar",
-             admin: true)
+locations = ['Chicago, IL', 'Dallas, TX',
+  'Los Angeles, CA', 'New York City, NY',
+  'Philadelphia, PA', 'Phoenix, AZ',
+  'San Diego, CA', 'San Francisco, CA']
 
-99.times do |n|
+photos = Dir.entries(Rails.root + 'seed_pictures/').select { |m| m =~ /jpg/i }
+
+NUM_USERS.times do |n|
   name  = Faker::Name.name
   email = "example-#{n+1}@railstutorial.org"
   password = "password"
@@ -23,18 +26,18 @@ User.create!(name:  "Example User",
                password_confirmation: password)
 end
 
-# Microposts
-users = User.order(:created_at).take(6)
-50.times do
-  content = Faker::Lorem.sentence(5)
-  users.each { |user| user.microposts.create!(content: content) }
+User.all.each do |user|
+  # follow users
+  User.all.sample(NUM_USERS_TO_FOLLOW).each do |user2|
+    user.follow(user2)
+  end
+
+  # make Microposts
+  photos.shuffle.each do |photo|
+    post = user.microposts.create!(
+      location: locations.sample,
+      content: Faker::Lorem.characters(4),
+      picture: Pathname.new(Rails.root + "seed_pictures/#{photo}").open
+    )
+  end
 end
-
-
-# Following relationships
-users = User.all
-user  = users.first
-following = users[2..50]
-followers = users[3..40]
-following.each { |followed| user.follow(followed) }
-followers.each { |follower| follower.follow(user) }
